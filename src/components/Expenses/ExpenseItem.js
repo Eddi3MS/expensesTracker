@@ -33,9 +33,9 @@ const ItemSty = styled.ul`
     .expense-item__price {
       font-size: 1rem;
       font-weight: bold;
-      color: var(--primary-900);
-      background-color: var(--primary-400);
-      border: 1px solid var(--primary-800);
+      color: var(--neutrals-900);
+      background-color: var(--neutrals-100);
+      border: 1px solid var(--neutrals-300);
       padding: 0.5rem;
       border-radius: 6px;
       margin-inline: 0.5rem;
@@ -84,7 +84,7 @@ const ExpenseItem = (props) => {
         <ExpenseDate date={props.date} />
         <div className="expense-item__description">
           <h2>{props.title}</h2>
-          <div className="expense-item__price">$ {props.amount}</div>
+          <div className="expense-item__price">${props.amount}</div>
           <button
             aria-label="delete entry"
             onClick={() => props.onDelete(props.id)}

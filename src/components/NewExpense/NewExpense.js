@@ -25,7 +25,7 @@ const NewExpSty = styled.div`
     padding: 1rem 2rem;
     border: 1px solid var(--primary-700);
     background-color: var(--primary-600);
-    color: var(--primary-100);
+    color: var(--neutrals-000);
     border-radius: 6px;
   }
   button + button {
