@@ -6,20 +6,18 @@ import styled from "styled-components";
 const ListSty = styled.ul`
   list-style: none;
   padding: 0;
-
-  .expenses-list__fallback {
-    color: white;
-    text-align: center;
-    padding-top: 1rem;
-  }
 `;
 
 const ExpensesList = (props) => {
+  if (props.items.length === 0)
+    return (
+      <h2 style={{ color: "white", textAlign: "center", paddingBlock: "1rem" }}>
+        Found no expenses.
+      </h2>
+    );
+
   return (
     <ListSty>
-      {props.items.length === 0 && (
-        <h2 className="expenses-list__fallback">Found no expenses.</h2>
-      )}
       {props.items.map((expense) => (
         <ExpenseItem
           key={expense.id}
