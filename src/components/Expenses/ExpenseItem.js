@@ -85,7 +85,10 @@ const ExpenseItem = (props) => {
         <div className="expense-item__description">
           <h2>{props.title}</h2>
           <div className="expense-item__price">$ {props.amount}</div>
-          <button onClick={() => props.onDelete(props.id)}>
+          <button
+            aria-label="delete entry"
+            onClick={() => props.onDelete(props.id)}
+          >
             <BiTrash />
           </button>
         </div>

@@ -54,7 +54,12 @@ const NewExpense = (props) => {
   return (
     <NewExpSty>
       {!isEditing && (
-        <button onClick={() => setIsEditing(true)}>Add New Expense</button>
+        <button
+          aria-label="add a new expense"
+          onClick={() => setIsEditing(true)}
+        >
+          Add New Expense
+        </button>
       )}
       {isEditing && (
         <ExpenseForm
